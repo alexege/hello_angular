@@ -12,4 +12,9 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
+  getAverage(movie){
+    //calcluations
+    return this.getAverage;
+  }
+
 }

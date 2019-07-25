@@ -1,1 +1,29 @@
-<p>add-movie works!</p>
+<div class="container">
+    <span class="header-tag">add-movie.component.html</span>
+    <h1>Submit a movie and your review</h1>
+
+    <label for="movie_title">Movie Title:
+        <input type="text" name="movie_title">
+    </label>
+    <br>
+    <label for="user_name">Reviewer Name:
+        <input type="text" name="user_name">
+    </label>
+    <br>    
+    <label for="movie_rating">Star Rating:
+        <select name="rating" id="movie_rating">
+            <option value="1">1 Star</option>
+            <option value="2">2 Star</option>
+            <option value="3">3 Star</option>
+            <option value="4">4 Star</option>
+            <option value="5">5 Star</option>
+        </select>
+    </label>
+    <br>
+    <label for="user_content">Review Content:
+        <input type="textarea" name="user_content">
+    </label>
+    <br>
+    <button>Submit</button>
+    <button (click)="cancel()">Cancel</button>
+</div>

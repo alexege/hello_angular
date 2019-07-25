@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { HttpService } from '../http.service';
 
 @Component({
   selector: 'app-add-movie',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddMovieComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _httpService: HttpService, private _router: Router) { }
 
   ngOnInit() {
+  }
+
+  cancel(){
+    console.log("Pushing cancel");
+    this._router.navigate(['/']);
   }
 
 }

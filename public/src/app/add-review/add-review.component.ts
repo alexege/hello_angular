@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpService } from '../http.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-review',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddReviewComponent implements OnInit {
 
-  constructor() { }
+  constructor(private _httpService: HttpService, private _router: Router){}
 
   ngOnInit() {
+  }
+
+  cancel(){
+    console.log("Pushing cancel");
+    this._router.navigate(['/']);
   }
 
 }

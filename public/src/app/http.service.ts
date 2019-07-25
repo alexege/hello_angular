@@ -7,12 +7,4 @@ import { Injectable } from '@angular/core';
 export class HttpService {
   constructor(private _http: HttpClient) {}
 
-  getTasks(){
-    return this._http.get('/api/tasks');
-  }
-
-  getTask(id){
-    return this._http.get(`/api/tasks/${id}`);
-  }
-
 }

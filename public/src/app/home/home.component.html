@@ -1,3 +1,31 @@
 <div class="container">
-    <h1>Welcome to the home page</h1>
+    <span class="header-tag">home.component.html</span>
+    <h1>Movie List</h1>
+    <button [routerLink]="['new']">Add new Movie</button>
+    <table class="table table-striped">
+        <thead class="thead thead-dark">
+            <tr>
+                <th>Movie Title</th>
+                <th>Available Actions</th>
+                <th>Average Star Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Finding Nemo</td>
+                <td>
+                    <button [routerLink]="['read_review']">Read Review</button>
+                    <button [routerLink]="['write_review']">Write Review</button>
+                </td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <!-- <h1>Welcome to the home page</h1>
+    <button [routerLink]="['home']">Home</button>
+    <button [routerLink]="['details']">Details</button>
+    <button (click)="cancel()">Details</button> -->
+
+    <router-outlet></router-outlet>
 </div>
