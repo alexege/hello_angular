@@ -1,5 +1,6 @@
 import { HttpService } from './http.service';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  constructor(private _httpService: HttpService){}
+  constructor(private _httpService: HttpService, private _router: Router){}
   
   ngOnInit(){
     this.getTasksFromService();
@@ -31,4 +32,8 @@ export class AppComponent implements OnInit {
     }
     )};
   
+  cancel(){
+    console.log("Pushing cancel");
+    this._router.navigate(['/']);
+  }
 }
