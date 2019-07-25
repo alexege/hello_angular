@@ -20,14 +20,14 @@ export class AppComponent implements OnInit {
   getTasksFromService(){
     this._httpService.getTasks().subscribe(data => {
       console.log(data);
-      this.tasks = data.tasks;
+      // this.tasks = data.tasks;
     }
     )};
   
   getTaskFromService(id){
     this._httpService.getTask(id).subscribe(data => {
       console.log(data);
-      this.one_task = data.tasks;
+      // this.one_task = data.tasks;
     }
     )};
   

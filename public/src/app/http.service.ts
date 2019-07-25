@@ -8,11 +8,11 @@ export class HttpService {
   constructor(private _http: HttpClient) {}
 
   getTasks(){
-    return this._http.get('/tasks');
+    return this._http.get('/api/tasks');
   }
 
   getTask(id){
-    return this._http.get(`/tasks/${id}`);
+    return this._http.get(`/api/tasks/${id}`);
   }
 
 }

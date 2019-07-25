@@ -4,8 +4,12 @@
     <li *ngFor="let task of tasks" (click)="getTaskFromService(task._id)">{{task.title}}</li>
   </ul>
 
+  <button [routerLink]="['home']">Home</button>
+
   <h1>Specific Task</h1>
   <ul>
     <li *ngIf="one_task">{{one_task.title}} {{one_task.description}}</li>
   </ul>
+
+  <router-outlet></router-outlet>
 </div>
